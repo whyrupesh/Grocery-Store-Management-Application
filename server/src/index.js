@@ -1,6 +1,7 @@
 import express from "express";
 import cors from "cors";
 import mongoose from "mongoose";
+import { OrderRouter } from "./routes/OrderRouter.js";
 
 import { userRouter } from "./routes/user.js";
 import { ProductRouter } from "./routes/ProductRouter.js";
@@ -11,6 +12,7 @@ app.use(cors());
 
 app.use("/auth", userRouter);
 app.use("/products", ProductRouter);
+app.use("/order", OrderRouter);
 
 mongoose
   .connect(
