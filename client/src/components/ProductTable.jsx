@@ -9,11 +9,13 @@ export default function ProductTable() {
       .then((products) => setProducts(products.data))
       .catch((err) => console.log(err));
   }, []);
+  var serial = 1;
   return (
     <>
       <table>
         <thead>
           <tr>
+            <td>Serial No.</td>
             <td>Product Name</td>
             <td>Quantity</td>
             <td>Price</td>
@@ -23,6 +25,7 @@ export default function ProductTable() {
           {products.map((product) => {
             return (
               <tr key={product._id}>
+                <td>{serial++}</td>
                 <td>{product.productname}</td>
                 <td>{product.quantity}</td>
                 <td>{product.price}</td>
