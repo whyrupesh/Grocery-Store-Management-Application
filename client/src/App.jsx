@@ -1,9 +1,9 @@
 import { useState } from "react";
 import "./App.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Navbar from "./components/Navbar";
+import Navbar from "./components/Navbar.jsx";
 import Auth from "./pages/Auth";
-import Home from "./pages/Home";
+import Home from "./pages/Home.jsx";
 import Order from "./pages/Order";
 import Products from "./pages/Products";
 
@@ -13,7 +13,8 @@ function App() {
   return (
     <>
       <Router>
-        <Navbar />
+    <Navbar/>
+ 
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/auth" element={<Auth />} />
