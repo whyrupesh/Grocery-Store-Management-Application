@@ -1,5 +1,5 @@
 import React from "react";
 
 export default function Order() {
-  return <div>Order</div>;
+  return <div className="text-white">Order</div>;
 }

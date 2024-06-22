@@ -32,7 +32,7 @@ const Register = () => {
   };
 
   return (
-    <div className="auth-container">
+    <div className="auth-container flex justify-center">
       <form onSubmit={handleSubmit}>
         <h2>Register</h2>
         <div className="form-group">
