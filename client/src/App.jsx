@@ -13,14 +13,15 @@ function App() {
   return (
     <>
       <Router>
-    <Navbar/>
- 
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/auth" element={<Auth />} />
-          <Route path="/order" element={<Order />} />
-          <Route path="/products" element={<Products />} />
-        </Routes>
+        <Navbar />
+        <div className="ml-[400px]">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/auth" element={<Auth />} />
+            <Route path="/order" element={<Order />} />
+            <Route path="/products" element={<Products />} />
+          </Routes>
+        </div>
       </Router>
     </>
   );

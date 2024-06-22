@@ -15,7 +15,7 @@ const UserProfile = ({ userName, userAvatar }) => (
 
 export default function HomePage() {
   return (
-    <div className="flex flex-col ml-64 border-2 border-black w-full h-screen">
+    <div className="flex flex-col border-2 border-black w-full h-screen">
       <div className="flex-1 flex flex-col">
         {/* Header Section */}
         <header className="p-4 pb-[19px] flex justify-between items-center ">
