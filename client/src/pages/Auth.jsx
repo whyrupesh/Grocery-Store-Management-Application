@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { CookiesProvider, useCookies } from "react-cookie";
 
 export default function Auth() {
   return (
@@ -15,8 +16,7 @@ const Register = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
-  // const [_, setCookies] = useCookies(["access_token"]);
-  // const navigate = useNavigate();
+  const [_, setCookies] = useCookies(["access_token"]);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -59,20 +59,26 @@ const Register = () => {
   );
 };
 
+//login
+
 const Login = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
-  // const [_, setCookies] = useCookies(["access_token"]);
+  const [_, setCookies] = useCookies(["access_token"]);
   const navigate = useNavigate();
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+    console.log(event);
     try {
-      const response = await axios.post("http://localhost:3002/auth/register", {
+      const response = await axios.post("http://localhost:3002/auth/login", {
         username,
         password,
       });
+
+      setCookies("access_token", result.data.token);
+      window.localStorage.setItem("userID", result.data.userID);
 
       alert("Logged in");
       navigate("/");
@@ -103,7 +109,7 @@ const Login = () => {
             onChange={(event) => setPassword(event.target.value)}
           />
         </div>
-        <button type="submit">Register</button>
+        <button type="submit">Login</button>
       </form>
     </div>
   );
