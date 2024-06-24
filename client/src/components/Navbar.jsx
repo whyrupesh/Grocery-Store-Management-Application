@@ -11,39 +11,22 @@ export default function Navbar() {
       <nav className="pt-8 pl-8">
         <ul className="space-y-12 ">
           <li>
-            <NavLink
-              exact
-              to="/"
-              activeClassName="text-yellow-500"
-              className="hover:text-yellow-500"
-            >
+            <NavLink to="/" className="hover:text-yellow-500">
               Home
             </NavLink>
           </li>
           <li>
-            <NavLink
-              to="/order"
-              activeClassName="text-yellow-500"
-              className="hover:text-yellow-500"
-            >
+            <NavLink to="/order" className="hover:text-yellow-500">
               Order
             </NavLink>
           </li>
           <li>
-            <NavLink
-              to="/products"
-              activeClassName="text-yellow-500"
-              className="hover:text-yellow-500"
-            >
+            <NavLink to="/products" className="hover:text-yellow-500">
               Products
             </NavLink>
           </li>
           <li>
-            <NavLink
-              to="/auth"
-              activeClassName="text-yellow-500"
-              className="hover:text-yellow-500"
-            >
+            <NavLink to="/auth" className="hover:text-yellow-500">
               Login/Register
             </NavLink>
           </li>
