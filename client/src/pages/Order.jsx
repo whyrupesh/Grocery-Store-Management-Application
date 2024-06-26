@@ -1,5 +1,10 @@
 import React from "react";
+import NewOrderDialog from "../components/NewOrderDialog";
 
 export default function Order() {
-  return <div className="text-white">Order</div>;
+  return (
+    <>
+      <NewOrderDialog />
+    </>
+  );
 }
